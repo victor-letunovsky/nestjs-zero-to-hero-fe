@@ -14,7 +14,7 @@ export default class TasksService extends BaseHttpService {
     }
 
     const queryStr = queryString.stringify(queryObj);
-    return this.get('tasks' + (queryStr ? `?${queryStr}` : ''));
+    return this.get('tasks/filter' + (queryStr ? `?${queryStr}` : ''));
   }
 
   async deleteTask(id) {
