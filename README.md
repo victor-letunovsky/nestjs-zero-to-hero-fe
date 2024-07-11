@@ -18,3 +18,11 @@ yarn start
 ```
 
 Open URL `http://localhost:3001/signin`
+
+# Deploy to GitHub pages
+* Go to repo "Settings -> Secrets and variables -> Actions -> New repository secret"
+* Define two secret variables
+  1. `REACT_APP_BASE_URL` should be URL from [Heroku back-end app deployment](https://nestjs-zero-to-hero-51c8f28b1c34.herokuapp.com).
+  2. `PUBLIC_URL` should be GitHub pages URL https://victor-letunovsky.github.io/nestjs-zero-to-hero-fe .
+* Go to repo "Actions -> All workflows -> Deploy" and "Run workflow" on `main` branch.
+* Go to repo "Settings -> Pages" and deploy `gh-pages` branch.
